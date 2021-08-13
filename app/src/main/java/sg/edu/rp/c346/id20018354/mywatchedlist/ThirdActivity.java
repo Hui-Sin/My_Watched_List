@@ -36,7 +36,7 @@ public class ThirdActivity extends AppCompatActivity {
         etID.setText(currentWatchlist.getId() + "");
         etTitle.setText(currentWatchlist.getTitle());
         etDescription.setText(currentWatchlist.getDescription());
-        etCategory.setText(currentWatchlist.getCategory() + "");
+        etCategory.setText(currentWatchlist.getCategory());
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +46,13 @@ public class ThirdActivity extends AppCompatActivity {
                 currentWatchlist.setTitle(etTitle.getText().toString().trim());
                 currentWatchlist.setDescription(etDescription.getText().toString().trim());
                 currentWatchlist.setCategory(etCategory.getText().toString().trim());
+                int result = dbh.updateItem(currentWatchlist);
+                if (result > 0) {
+                    Toast.makeText(ThirdActivity.this, "Item updated", Toast.LENGTH_SHORT).show();
+                    finish();
+                } else {
+                    Toast.makeText(ThirdActivity.this, "Update failed", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

@@ -1,7 +1,6 @@
 package sg.edu.rp.c346.id20018354.mywatchedlist;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -25,7 +24,7 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        DBHelper dbh = new DBHelper(this);
+        DBHelper dbh = new DBHelper(SecondActivity.this);
         watchList.clear();
         watchList.addAll(dbh.getAllList());
         caadapter.notifyDataSetChanged();
