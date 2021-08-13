@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Watched List</string>
+    <string name="title">Title</string>
+    <string name="hint_title">Enter title here</string>
+    <string name="description">Description</string>
+    <string name="hint_description">Enter short description here</string>
+    <string name="category">Category</string>
+    <string name="hint_category">Enter category of choice here</string>
+    <string name="id">Watched/Read ID</string>
+    <string name="btnShowList">Show List</string>
+    <string name="btnInsert">Insert</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+</resources>
